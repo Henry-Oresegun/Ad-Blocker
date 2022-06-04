@@ -1,0 +1,25 @@
+{
+  "name": "Henry's Adblocker", 
+  "description": "An undetectable extension that allows you to browse without distractions, and display the amount of ads that are blocked",
+  "manifest_version": 2,
+  "version": "1.0", 
+  "background": {
+    "scripts": ["bg_scripts/tab_data.js",
+                "bg_scripts/adblock_scripts/ad_domains.js", 
+                "bg_scripts/adblock_scripts/adblock.js"
+                ]
+  },
+  "browser_action": {
+      "default_popup": "index.html"
+  },
+  "permissions": ["webRequest", 
+                  "webRequestBlocking", 
+                  "http://*/", 
+                  "https://*/", 
+                  "storage", 
+                  "background", 
+                  "contentSettings"],
+  "icons": { "16": "no-ads_16x16.png",
+             "48": "no-ads_48x48.png",
+             "128": "no-ads_128x128.png" }
+}
